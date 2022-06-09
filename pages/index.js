@@ -72,6 +72,5 @@ export const getServerSideProps = async () => {
       productIndex: productIndex,
       allDownloadData: allDownloadData,
     },
-    revalidate: 1,
   };
 };
