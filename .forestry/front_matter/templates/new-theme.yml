@@ -1,0 +1,71 @@
+---
+label: New Theme
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: datetime
+  name: last_update
+  label: last_update
+- type: text
+  name: subtitle
+  label: subtitle
+  description: 'ex: Creative business theme'
+- type: text
+  name: description
+  label: description
+  description: Meta Description
+- type: list
+  name: keywords
+  label: keywords
+  description: Search Keywords
+- type: number
+  name: price
+  label: price
+- type: file
+  name: image
+  label: image
+- type: text
+  name: demo
+  label: demo
+  description: 'ex: "https://demo.gethugothemes.com/biztrox/site/"'
+  hidden: true
+- type: text
+  name: documentation
+  label: documentation
+  description: 'ex: "https://docs.gethugothemes.com/biztrox/"'
+  hidden: true
+- type: textarea
+  name: download
+  label: download
+  description: 'Only Product ID [ex: 37]'
+- name: github
+  type: text
+  config:
+    required: false
+  label: github
+  description: GitHub URL
+- type: list
+  name: categories
+  label: categories
+- type: text
+  name: theme_version
+  label: theme_version
+- type: text
+  name: hugo_version
+  label: hugo_version
+- type: boolean
+  name: bundle
+  label: bundle
+  description: Included in the bundle
+- type: text
+  name: weight
+  label: weight
+  description: For flagship products, numeric value
+- type: boolean
+  name: draft
+  label: draft

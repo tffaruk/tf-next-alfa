@@ -1,0 +1,36 @@
+---
+label: New Post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: meta_title
+  label: meta title
+- type: text
+  name: description
+  label: description
+- type: list
+  name: categories
+  label: categories
+- type: text
+  name: author
+  label: author
+  default: Mehedi Sharif
+- type: file
+  name: image
+  label: image
+- type: text
+  name: layout
+  label: layout
+  default: post
+  showOnly:
+    value: false
+  hidden: true
+- type: boolean
+  name: draft
+  label: draft

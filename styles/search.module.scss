@@ -1,0 +1,102 @@
+@import "variables";
+@import "mixins";
+
+.searchContainer {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.searchResultWrap {
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  max-height: calc(100vh - 260px);
+  overflow-y: auto;
+}
+.searchBox {
+  width: 900px;
+  max-width: calc(100% - 50px);
+  @include tablet {
+    max-width: calc(100% - 20px);
+  }
+  margin: 0px auto;
+  margin-top: 100px;
+  height: auto;
+  background-color: white;
+  position: relative;
+  z-index: 600;
+  border-radius: 8px;
+  box-shadow: 0 15px 25px #00000029;
+}
+.formControl {
+  height: 48px;
+  padding-bottom: 2px;
+}
+.fontMedium {
+  font-weight: 500;
+}
+.searchToggle {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  background-color: rgba(black, 0.35);
+}
+.searchClose {
+  border: 1px solid #eee;
+  border-radius: 6px !important;
+  padding: 2px 6px 1px 8px !important;
+  @include mobile {
+    font-size: 20px;
+    padding: 0px 8px !important;
+  }
+  cursor: pointer;
+  margin: 0;
+  z-index: 10;
+  transform: translateX(-13px);
+  background: $white;
+  &:hover {
+    background-color: #eee;
+  }
+}
+@supports (
+  (-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur(4px))
+) {
+  .searchToggle {
+    background-color: rgba(black, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+}
+
+// searchResult
+.searchResultCard {
+  transition: 0.2s ease;
+  a {
+    color: $text-dark !important;
+  }
+  &:hover {
+    transform: translateY(-2px);
+    a {
+      color: $primary-color !important;
+    }
+  }
+}
+
+.searchResultImage {
+  width: 130px;
+  flex-shrink: 0;
+  @include tablet {
+    width: 80px;
+  }
+  @include mobile {
+    width: 100px;
+  }
+  @include mobile-xs {
+    width: 70px;
+  }
+}

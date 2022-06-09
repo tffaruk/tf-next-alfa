@@ -1,0 +1,56 @@
+@import "bootstrap_variables";
+@import "bootstrap";
+@import "variables";
+
+html {
+  scroll-behavior: auto !important;
+}
+
+.form-control,
+.form-select {
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+textarea.form-control {
+  padding: 0.5rem 0.75rem !important;
+}
+
+.img-cover {
+  line-height: 1 !important;
+  span {
+    height: 100% !important;
+    width: 100% !important;
+  }
+  img {
+    object-position: top;
+  }
+}
+
+.stretched-link::after {
+  z-index: 67 !important;
+}
+
+nav.toc {
+  display: none;
+}
+
+.no-toc {
+  padding-right: 0 !important;
+}
+
+.CookieConsent > div {
+  flex: unset !important;
+}
+
+.border-primary {
+  border-color: $primary-color !important;
+}
+
+.link-secondary {
+  color: #999 !important;
+  text-decoration: underline !important;
+  &:hover {
+    color: $primary-color !important;
+  }
+}

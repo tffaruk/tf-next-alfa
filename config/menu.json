@@ -1,0 +1,154 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "Templates",
+      "url": "/templates",
+      "child": [
+        {
+          "name": "Hugo Themes",
+          "url": "/hugo-themes"
+        },
+        {
+          "name": "Free Templates",
+          "url": "/free-bootstrap-templates"
+        },
+        {
+          "name": "Premium Templates",
+          "url": "/premium-templates"
+        },
+        {
+          "name": "E-commerce",
+          "url": "/categories/e-commerce"
+        },
+        {
+          "name": "Landing Page",
+          "url": "/categories/landing-page"
+        },
+        {
+          "name": "Business",
+          "url": "/categories/business"
+        },
+        {
+          "name": "Agency",
+          "url": "/categories/agency"
+        },
+        {
+          "name": "Portfolio",
+          "url": "/categories/portfolio"
+        },
+        {
+          "name": "Admin theme",
+          "url": "/categories/admin-theme"
+        },
+        {
+          "name": "Others",
+          "url": "/categories/others"
+        }
+      ]
+    },
+    {
+      "name": "Bundle",
+      "url": "/bundle",
+      "child": [
+        {
+          "name": "Bootstrap Bundle",
+          "url": "/bootstrap-bundle"
+        },
+        {
+          "name": "Hugo Bundle",
+          "url": "/hugo-bundle"
+        }
+      ]
+    },
+    {
+      "name": "Blog",
+      "url": "/blog"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    },
+    {
+      "name": "Account",
+      "url": "https://account.themefisher.com/",
+      "rel": "nofollow"
+    }
+  ],
+
+  "footer": [
+    {
+      "name": "company",
+      "pages": [
+        {
+          "name": "Blog",
+          "url": "/blog"
+        },
+        {
+          "name": "Account",
+          "url": "https://account.themefisher.com/",
+          "rel": "nofollow"
+        }
+      ]
+    },
+    {
+      "name": "Resources",
+      "pages": [
+        {
+          "name": "Bundle",
+          "url": "/bundle"
+        },
+        {
+          "name": "Hugo Themes",
+          "url": "/hugo-themes"
+        },
+        {
+          "name": "Premium Bootstrap Templates",
+          "url": "/premium-templates"
+        }
+      ]
+    },
+    {
+      "name": "Help And Support",
+      "pages": [
+        {
+          "name": "Documentaion",
+          "url": "https://docs.themefisher.com/",
+          "rel": "nofollow"
+        },
+        {
+          "name": "Frequently Asked Questions",
+          "url": "/faq",
+          "rel": "nofollow"
+        },
+        {
+          "name": "Re Download",
+          "url": "/re-download",
+          "rel": "nofollow"
+        },
+        {
+          "name": "Contact",
+          "url": "/contact"
+        }
+      ]
+    },
+    {
+      "name": "Terms",
+      "pages": [
+        {
+          "name": "Privacy Policy",
+          "url": "/privacy-policy",
+          "rel": "nofollow"
+        },
+        {
+          "name": "License",
+          "url": "/license",
+          "rel": "nofollow"
+        }
+      ]
+    }
+  ]
+}

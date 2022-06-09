@@ -1,0 +1,21 @@
+---
+label: New Page
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: meta_title
+  label: meta_title
+- type: text
+  name: description
+  label: description
+- type: text
+  name: image
+  label: image
+- type: boolean
+  name: noindex
+  label: noindex
+pages:
+- content/re-download.md

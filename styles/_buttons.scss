@@ -1,0 +1,170 @@
+@import "variables";
+@import "mixins";
+
+$button-color: #00aeef;
+
+.btn {
+  padding: 14px 28px 12px !important;
+  cursor: pointer;
+  font-weight: 600 !important;
+  outline: none;
+  display: inline-block;
+  text-transform: capitalize;
+  z-index: 1;
+  white-space: initial !important;
+  &:active,
+  &.active,
+  &.focus {
+    box-shadow: none !important;
+  }
+  &:focus,
+  &:hover {
+    box-shadow: 0 8px 25px -10px rgba($button-color, 0.4) !important;
+    transform: translateY(-1px);
+    transition: all 0.3s !important;
+  }
+  @include tablet {
+    padding: 12px 20px 10px !important;
+    font-size: 15px;
+  }
+
+  &-sm {
+    padding: 12px 20px 10px !important;
+    font-size: 15px;
+  }
+
+  &-lg {
+    font-size: 1rem;
+    padding: 15px 24px 13px !important;
+    @include tablet {
+      padding: 14px 28px 12px !important;
+    }
+  }
+}
+
+.btn-primary {
+  border: 1px solid transparent !important;
+  color: $white !important;
+  background: linear-gradient(
+    183deg,
+    lighten(adjust-hue($button-color, 8), 0.59) -30%,
+    $button-color 90%
+  );
+  &:hover {
+    border: 1px solid transparent !important;
+  }
+}
+
+.btn-outline-primary {
+  background: transparent;
+  color: $button-color !important;
+  border: 1px solid $button-color !important;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  &::after {
+    position: absolute;
+    content: "";
+    top: -1px;
+    left: -1px;
+    height: calc(100% + 2px);
+    width: calc(100% + 2px);
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(
+      183deg,
+      lighten(adjust-hue($button-color, 8), 0.59) -30%,
+      $button-color 90%
+    );
+    transition: 0.3s ease;
+    opacity: 0;
+  }
+  &:focus,
+  &:hover {
+    background-color: transparent;
+    color: $white !important;
+    border-color: $button-color;
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.btn-demo {
+  background: transparent;
+  color: $button-color !important;
+  border: 1px solid $button-color !important;
+  font-weight: 500;
+  &:focus,
+  &:hover {
+    background-color: transparent;
+    color: $button-color !important;
+    border-color: $button-color;
+  }
+}
+
+.btn-soft-primary {
+  color: $button-color;
+  font-weight: 500;
+  border-color: transparent;
+  background: lighten(desaturate(adjust-hue($button-color, 2), 20), 47.06);
+  &::after {
+    position: absolute;
+    content: "";
+    top: -1px;
+    left: -1px;
+    height: calc(100% + 2px);
+    width: calc(100% + 2px);
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(
+      183deg,
+      lighten(adjust-hue($button-color, 8), 0.59) -30%,
+      $button-color 90%
+    );
+    transition: 0.3s ease;
+    opacity: 0;
+  }
+  &:focus,
+  &:hover {
+    background-color: transparent;
+    color: $white;
+    border-color: $button-color;
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.btn-bundle {
+  color: $white !important;
+  border: 0;
+  background: linear-gradient(
+    183deg,
+    lighten(adjust-hue(#f16b81, 8), 0.59) -30%,
+    #ef2c49 90%
+  );
+  &:focus,
+  &:hover {
+    color: $white !important;
+    box-shadow: 0 8px 25px -10px rgba(#ef2c49, 0.5) !important;
+  }
+}
+
+.btn-github {
+  color: $black;
+  border: 0;
+  font-weight: 500;
+  padding: 10px 2px 6px;
+  svg {
+    transform: translateY(-2px);
+    fill: black;
+  }
+  &:focus,
+  &:hover {
+    color: $black;
+    box-shadow: none !important;
+    transform: translateY(0px) !important;
+    text-decoration: underline;
+  }
+}

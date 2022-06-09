@@ -1,0 +1,58 @@
+{
+  "parameter": {
+    "title": "Powerful, Creative And Blazing Fast Premium Hugo Themes",
+    "favicon": "/images/logo/favicon.svg",
+    "logo": "/images/logo/logo.svg",
+    "copyright": "COPYRIGHT © 2022 THEMEFISHER",
+    "pagination": 15,
+    "description": "We build elegant and SEO Optimized Premium Hugo Themes. We are the biggest theme company among the Hugo community . Our themes has been forked over 5000 times.",
+    "site_url": "https://themefisher.com/",
+    "meta_author": "Themefisher",
+    "meta_image": "/images/og-image.png",
+    "tag_manager_id": "GTM-TZRL6GQ",
+    "show_products": 30,
+    "disqus_comment": false
+  },
+
+  "socialMedia": [
+    {
+      "name": "facebook",
+      "icon": "/images/icons/facebook.svg",
+      "link": "https://www.facebook.com/themefisher/"
+    },
+    {
+      "name": "twitter",
+      "icon": "/images/icons/twitter.svg",
+      "link": "https://twitter.com/themefisher/"
+    },
+    {
+      "name": "dribbble",
+      "icon": "/images/icons/dribbble.svg",
+      "link": "https://dribbble.com/themefisher/"
+    },
+    {
+      "name": "pinterest",
+      "icon": "/images/icons/pinterest.svg",
+      "link": "https://pinterest.com/themefisher/"
+    },
+
+    {
+      "name": "github",
+      "icon": "/images/icons/github.svg",
+      "link": "https://www.github.com/themefisher/"
+    }
+  ],
+  "bundle": {
+    "title": "Unlimited Access To All Hugo Themes",
+    "subtitle": "Get Lifetime Access to **40+** **$99**  other hugo themes including this theme only",
+    "label": "Grab This Deal Now",
+    "link": "/hugo-bundle"
+  },
+  "brands": [
+    {
+      "name": "GethugoThemes",
+      "logo": "/images/logo/ght-logo-white.svg",
+      "url": "https://gethugothemes.com"
+    }
+  ]
+}

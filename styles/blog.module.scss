@@ -1,0 +1,331 @@
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "buttons";
+
+.postCard {
+  border-radius: 8px;
+  box-shadow: 0 15px 55px 0 rgba(0, 0, 0, 0.04);
+  margin-top: 30px;
+  height: 100%;
+  max-height: calc(100% - 30px);
+  padding: 1.25rem;
+}
+.postCard .img {
+  border-radius: 8px;
+}
+.postCard .postTag li {
+  display: inline-block;
+
+  .postCard .postTag:not(:last-child) {
+    margin-right: 12px;
+  }
+}
+.postTag {
+  padding-left: 0px !important;
+}
+.postCard .postTag li a {
+  font-size: 14px;
+  color: #71818c;
+  text-decoration: underline;
+  text-decoration-color: rgba($primary-color, 0.3);
+  text-transform: capitalize;
+  &:hover {
+    color: #333;
+  }
+}
+
+.postCard .postTitle {
+  margin-bottom: 0;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.postCard .postTitle a {
+  color: #222222;
+  display: block;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.postCard .postTitle:hover a {
+  color: $primary-color;
+}
+
+.postCard .postMeta {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+  color: #777;
+  margin-top: 8px !important;
+  @include desktop-lg {
+    font-size: 14px;
+  }
+}
+.postCard .postMeta a {
+  color: #777;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.postCardSm {
+  border-radius: 8px;
+}
+.postCardSm .postTitle {
+  font-size: 22px;
+}
+// blog-single-page
+.blogSinglePage {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $heading-font;
+  }
+}
+.blogSinglePage .row {
+  justify-content: center;
+}
+.blogSinglePage .blogSingleTitle {
+  color: $black;
+  font-family: $heading-font;
+}
+.blogSinglePage h2.widgetTitle {
+  font-size: 22px;
+}
+.blogSinglePage .block {
+  padding-top: 15px;
+}
+.blogSinglePage .entryMeta {
+  list-style: none;
+  margin-top: 20px;
+  ul {
+    padding-left: 0;
+  }
+  li {
+    display: inline-block;
+    margin-right: 8px;
+  }
+}
+.blogSinglePage .entryMeta a {
+  color: #71818c;
+  font-size: 15px;
+  text-transform: capitalize;
+  margin: 0 5px;
+  display: inline-block;
+}
+.blogSinglePage .entryMeta time {
+  color: #71818c;
+  font-size: 15px;
+  text-transform: capitalize;
+  margin: 0 5px;
+  display: inline-block;
+}
+.blogSinglePage .entryMeta a {
+  text-decoration: underline;
+  &:hover {
+    color: #333;
+  }
+}
+.blogSinglePage .img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.blogSinglePage .entryHeader img {
+  width: 100%;
+  height: auto;
+}
+
+.blogSinglePage .entryContent {
+  margin-top: 10px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $black;
+    padding-top: 28px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    margin-bottom: 22px;
+    line-height: 1.8;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.btnDownload,
+.btnDemo {
+  margin-right: 5px;
+  margin-bottom: 12px;
+  margin-top: 10px;
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+  }
+
+  @include mobile {
+    padding: 18px 40px;
+  }
+}
+.btnSolid {
+  color: $white;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.blog-single-sidebar {
+  &.sticky-top {
+    z-index: 30;
+    position: static !important;
+  }
+  .widget {
+    margin-bottom: 15px;
+  }
+}
+.admin-bar {
+  .blog-single-sidebar.sticky-top {
+    top: 46px;
+  }
+}
+.admin-bar.navigation-fixed {
+  .blog-single-sidebar.sticky-top {
+    top: calc(46px + 90px);
+  }
+}
+.navigation-fixed {
+  .blog-single-sidebar.sticky-top {
+    top: 90px;
+  }
+}
+
+.blog-sidebar-bundle-widget {
+  width: 300px;
+  margin-right: -330px;
+  @media screen and (max-width: 1580px) {
+    width: 250px !important;
+    margin-right: -280px;
+  }
+  z-index: 1;
+  float: right;
+  position: sticky;
+  top: 32vh;
+  margin-top: 110vh;
+  @media screen and (max-width: 1336px) {
+    margin-right: -140px;
+    margin-top: 20px;
+    position: static;
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 1095px) {
+    margin-right: -100px;
+    margin-top: 50px;
+    margin-left: 30px;
+  }
+  @media screen and (max-width: 940px) {
+    margin-right: 0;
+  }
+  @include mobile {
+    display: none;
+  }
+  img {
+    box-shadow: 0 10px 25px #e0e0e0;
+  }
+}
+
+.postContent {
+  padding-right: 250px;
+  position: relative;
+  @include desktop-xl {
+    padding-right: 150px;
+  }
+  @media (max-width: 885px) {
+    padding-right: 0;
+  }
+}
+.sharePost {
+  position: initial;
+  margin-top: 60px;
+}
+.sharePost ul {
+  position: sticky;
+  top: 50px;
+}
+.sharePost li {
+  display: inline-block;
+  margin-left: 18px;
+  margin-bottom: 6px;
+  font-size: 18px;
+  height: 40px;
+  width: 40px;
+}
+.sharePost li a {
+  opacity: 1;
+  border: 1px solid rgba($text-color,.15);
+  border-radius: 4px;
+  display: block;
+  text-align: center;
+  line-height: 36px;
+  &:hover {
+    opacity: .7;
+  }
+}
+.copyLink {
+  cursor: pointer;
+  color: rgba($text-color,.6) !important;
+  transition: .3s;
+  &:hover {
+    color: rgba($black,.8) !important;
+  }
+}
+
+.scrollToTop {
+  position: fixed;
+  bottom: 90px;
+  right: 32px;
+  z-index: 99999;
+  cursor: pointer;
+  transition: .2s;
+  border: 1px solid rgba($text-color,.15);
+  height: 42px;
+  width: 42px;
+  line-height: 39px;
+  text-align: center;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  background-color: white;
+  &:hover {
+    opacity: .7;
+  }
+}
+.dBlock {
+  opacity: 1;
+  visibility: visible;
+  bottom: 105px;
+}

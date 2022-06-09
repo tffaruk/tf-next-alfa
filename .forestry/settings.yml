@@ -1,0 +1,103 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: ''
+webhook_url: 
+sections:
+- type: heading
+  label: Main Pages
+- type: document
+  path: content/_index.md
+  label: Homepage
+- type: document
+  path: content/bundle.md
+  label: Bundle
+- type: document
+  path: content/bootstrap-bundle.md
+  label: Bootstrap Bundle
+- type: document
+  path: content/hugo-bundle.md
+  label: Hugo Bundle
+- type: document
+  path: content/contact.md
+  label: Contact
+- type: document
+  path: content/faq.md
+  label: FAQ
+- type: document
+  path: content/testimonial.md
+  label: Testimonial
+- type: document
+  path: content/showcase.md
+  label: Showcase
+- type: document
+  path: content/privacy-policy.md
+  label: Privacy
+- type: document
+  path: content/re-download.md
+  label: Redownload
+- type: document
+  path: content/license.md
+  label: License
+- type: heading
+  label: Blog
+- type: document
+  path: content/blog/_index.md
+  label: Blog Page
+- type: directory
+  path: content/blog
+  label: Blog Posts
+  create: documents
+  match: "**/*"
+  exclude: _index.md
+  templates:
+  - new-post
+- type: directory
+  path: content/categories
+  label: Categories
+  create: documents
+  match: "**/*"
+  templates:
+  - new-category
+- type: heading
+  label: Products
+- type: document
+  path: content/products/_index.md
+  label: Product Page
+- type: directory
+  path: content/products
+  label: Product Items
+  create: documents
+  match: "**/*"
+  exclude: _index.md
+  templates:
+  - new-theme
+- type: heading
+  label: Changelogs
+- type: directory
+  path: changelog
+  label: Changelogs
+  create: documents
+  match: "**/*"
+  templates:
+  - changelog
+- type: heading
+  label: Configurations
+- type: document
+  path: config/menu.json
+  label: Menus
+- type: document
+  path: config/config.json
+  label: Config
+upload_dir: public/blog
+public_path: "/blog"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_output_directory: ".next"
+  install_dependencies_command: npm install --save next react react-dom
+  preview_docker_image: forestryio/node:16
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: npm run forestry

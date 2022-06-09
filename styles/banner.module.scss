@@ -1,0 +1,306 @@
+// Banner
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "buttons";
+
+.banner {
+  padding: 100px 0;
+  background-repeat: no-repeat;
+  background-position: 75% bottom;
+  background-size: 40%;
+  @media screen and (max-width: 1920px) {
+    background-size: 45%;
+    background-position: 80% 50%;
+  }
+  @media screen and (max-width: 1600px) {
+    background-size: 45%;
+    background-position: 85% 50%;
+  }
+  @media screen and (max-width: 1465px) {
+    background-size: 48%;
+    background-position: 90% center;
+  }
+
+  @include desktop {
+    padding: 40px 0 60px;
+  }
+}
+.banner .block h1 {
+  color: $text-dark;
+
+  @include desktop {
+    font-size: 48px;
+  }
+
+  @include tablet {
+    font-size: 40px;
+  }
+
+  @include mobile-xs {
+    font-size: 36px;
+  }
+}
+.banner .block p {
+  margin-bottom: 2.1875rem !important;
+  font-size: 18px;
+}
+
+.homepageBanner {
+  position: relative;
+  @include desktop {
+    background-image: none !important;
+    padding-top: 50px;
+  }
+  @include tablet {
+    overflow: hidden;
+  }
+}
+.homepageBanner .hasWave {
+  padding-bottom: 80px;
+}
+
+.homepageBanner .container {
+  position: relative;
+  z-index: 3;
+}
+
+.homepageBanner .bannerIllustration {
+  @include desktop-lg {
+    margin-bottom: -100px;
+  }
+  @include desktop {
+    margin-bottom: -80px;
+  }
+  @include tablet {
+    margin-bottom: -55px;
+  }
+  position: relative;
+  z-index: 3;
+}
+.homepageBanner .bannerIllustration {
+  @include mobile {
+    img {
+      width: initial !important;
+      height: initial !important;
+      max-height: 250px !important;
+      max-width: none !important;
+    }
+  }
+}
+
+.homepageBanner .floatingAssets {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.homepageBanner .floatingAssets img {
+  position: absolute;
+}
+
+.homepageBanner .floatingAssets .bgPrimary {
+  background-color: $primary-color !important;
+}
+
+.homepageBanner .floatingAssets .bgTertiary {
+  background-color: $secondary-color;
+}
+
+.homepageBanner .floatingAssets .wave1 {
+  top: 20%;
+  left: 10%;
+  height: 106px;
+  width: 131px;
+  position: absolute;
+
+  @include desktop-xl {
+    left: 0%;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.homepageBanner .floatingAssets .wave2 {
+  top: 320px;
+  left: 18%;
+  height: 73px;
+  width: 187px;
+  position: absolute;
+
+  @include desktop-xl {
+    left: 12%;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.homepageBanner .floatingAssets .wave3 {
+  top: 300px;
+  right: 18%;
+  height: 83px;
+  width: 214px;
+  position: absolute;
+
+  @include desktop-xl {
+    right: 12%;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.homepageBanner .floatingAssets .wave4 {
+  top: 20%;
+  right: 15%;
+  height: 72px;
+  width: 104px;
+  position: absolute;
+
+  @include desktop-xl {
+    right: 5%;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.circles span {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.circles .circle1 {
+  top: 16%;
+  left: 22%;
+
+  @include desktop-xl {
+    left: 15%;
+  }
+}
+
+.circles .circle2 {
+  height: 35px;
+  width: 35px;
+  left: 4%;
+  top: 40%;
+
+  @include desktop-xl {
+    left: 2%;
+  }
+}
+
+.circles .circle3 {
+  bottom: 30%;
+  left: 9%;
+  height: 15px;
+  width: 15px;
+
+  @include desktop-xl {
+    left: 4%;
+  }
+}
+
+.circles .circle4 {
+  top: 25%;
+  right: 23%;
+
+  @include desktop-xl {
+    right: 15%;
+  }
+}
+
+.circles .circle5 {
+  top: 38%;
+  right: 7%;
+  height: 25px;
+  width: 25px;
+
+  @include desktop-xl {
+    right: 3%;
+  }
+}
+
+.circles .circle6 {
+  bottom: 40%;
+  right: 11%;
+
+  @include desktop-xl {
+    right: 2%;
+  }
+}
+
+// scrollable-wrapper
+.scrollableWrapper {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  padding-bottom: 20px;
+  user-select: none;
+
+  &::-webkit-scrollbar {
+    height: 17px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #fafafa;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: darken(#fafafa, 10);
+    border: 2px solid #fafafa;
+  }
+}
+.scrollableWrapper .item {
+  height: calc(100% - 30px);
+  margin-top: 30px;
+  // @extend .shadow;
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.scrollableWrapper .item img {
+  transition: transform 0.3s;
+  height: auto;
+}
+.scrollableWrapper .item:hover img {
+  transform: scale(1.05);
+}
+
+.scrollableWrapper .item .block {
+  padding: 35px 20px;
+}
+
+.scrollableWrapper .item a:hover h5 {
+  color: $primary-color;
+}
+
+.aboutInfoBox {
+  display: flex;
+  @include desktop-xl {
+    display: block;
+  }
+}
+.aboutInfoBox > div:first-child {
+  margin-bottom: 30px;
+}
+.aboutInfoBox .h3 {
+  font-size: 28px !important;
+}
+
+.aboutInfoBox span {
+  display: block;
+  @include desktop-xl {
+    display: inline;
+  }
+}

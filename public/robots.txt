@@ -1,0 +1,6 @@
+Sitemap: https://themefisher.com/sitemap.xml
+
+User-agent: *
+Allow: /
+
+Disallow: /api/*

@@ -1,0 +1,253 @@
+.post-card {
+  border-radius: 8px;
+  box-shadow: 0 15px 55px 0 rgba(0, 0, 0, 0.04);
+  margin-top: 30px;
+  height: 100%;
+  max-height: calc(100% - 30px);
+
+  .post-tag {
+    li {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+
+    li a {
+      font-size: 14px;
+      color: #71818c;
+      text-decoration: underline;
+      text-decoration-color: rgba($primary-color, 0.3);
+      text-transform: capitalize;
+      &:hover {
+        color: #333;
+      }
+    }
+  }
+
+  .post-title {
+    font-weight: 500;
+    margin-bottom: 0;
+    line-height: 1.4;
+    font-weight: 500;
+
+    a {
+      color: #222222;
+      display: block;
+      transition: color 0.2s;
+    }
+
+    &:hover a {
+      color: $primary-color;
+    }
+  }
+
+  .post-meta {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #777;
+    margin-top: 8px !important;
+    @include desktop-lg {
+      font-size: 14px;
+    }
+    a {
+      color: #777;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.post-card-sm {
+  border-radius: 8px;
+
+  .post-title {
+    font-size: 22px;
+  }
+}
+
+// blog-single-page
+.blog-single-page {
+  .row {
+    justify-content: center;
+  }
+  .blog-single-title {
+    color: $black;
+    font-family: $heading-font;
+  }
+  h2.widget-title {
+    font-size: 22px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $heading-font;
+  }
+
+  .block {
+    padding-top: 15px;
+  }
+
+  .entry-meta {
+    list-style: none;
+    margin-top: 20px;
+    ul {
+      padding-left: 0;
+    }
+    li {
+      display: inline-block;
+      margin-right: 8px;
+    }
+  }
+
+  .entry-meta a,
+  .entry-meta time {
+    color: #71818c;
+    font-size: 15px;
+    text-transform: capitalize;
+    margin: 0 5px;
+    display: inline-block;
+  }
+  .entry-meta a {
+    text-decoration: underline;
+    &:hover {
+      color: #333;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .entry-header img {
+    width: 100%;
+    height: auto;
+  }
+
+  .entry-content {
+    margin-top: 10px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: $black;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 35px;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      margin-bottom: 22px;
+      line-height: 1.8;
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: underline;
+
+      &:hover {
+        color: darken($primary-color, 7);
+      }
+    }
+
+    .btn-download,
+    .btn-demo {
+      margin-right: 5px;
+      margin-bottom: 12px;
+      margin-top: 10px;
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        color: $white;
+      }
+
+      @include mobile {
+        padding: 18px 40px;
+      }
+    }
+  }
+}
+
+.blog-single-sidebar {
+  &.sticky-top {
+    z-index: 30;
+    position: static !important;
+  }
+  .widget {
+    margin-bottom: 15px;
+  }
+}
+.admin-bar {
+  .blog-single-sidebar.sticky-top {
+    top: 46px;
+  }
+}
+.admin-bar.navigation-fixed {
+  .blog-single-sidebar.sticky-top {
+    top: calc(46px + 90px);
+  }
+}
+.navigation-fixed {
+  .blog-single-sidebar.sticky-top {
+    top: 90px;
+  }
+}
+
+.blog-sidebar-bundle-widget {
+  width: 300px;
+  margin-right: -330px;
+  @media screen and (max-width: 1580px) {
+    width: 250px !important;
+    margin-right: -280px;
+  }
+  z-index: 1;
+  float: right;
+  position: sticky;
+  top: 32vh;
+  margin-top: 110vh;
+  @media screen and (max-width: 1336px) {
+    margin-right: -140px;
+    margin-top: 20px;
+    position: static;
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 1095px) {
+    margin-right: -100px;
+    margin-top: 50px;
+    margin-left: 30px;
+  }
+  @media screen and (max-width: 940px) {
+    margin-right: 0;
+  }
+  @include mobile {
+    display: none;
+  }
+  img {
+    box-shadow: 0 10px 25px #e0e0e0;
+  }
+}

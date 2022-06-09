@@ -1,0 +1,105 @@
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "buttons";
+.footer {
+  background: #1a1d2d;
+}
+
+.footerSocial span {
+  color: $white;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footerSocial .socialMediaIcons {
+  li {
+    margin-right: 1rem;
+    display: inline-block !important;
+  }
+
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.footerWidget .footerWidgetTitle {
+  font-size: 16px;
+  color: $white;
+  position: relative;
+  padding-bottom: 20px;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    width: 30px;
+    height: 1px;
+    margin-top: 20px;
+    background-color: #b0b0b1;
+  }
+}
+
+.footerWidget .menu {
+  padding-left: 0;
+}
+.footerWidget .menu li {
+  display: block;
+}
+.footerWidget .menu li a {
+  color: rgb(147, 161, 176);
+  display: inline-block;
+  padding: 4px 0;
+  font-weight: 500;
+
+  &:hover {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+.footerMenu {
+  padding: 100px 0 50px;
+}
+.footerMenu .currentPageItem a {
+  color: #93a1b0 !important;
+
+  &:hover {
+    color: $white !important;
+  }
+}
+
+.footerPartners {
+  position: relative;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.footerPartners .footerLabel {
+  position: absolute;
+  top: -12px;
+  font-size: 14px;
+  line-height: 1;
+  display: inline-block;
+  background: #1a1d2d;
+  padding: 5px 10px;
+  margin-left: -10px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1.875rem 0;
+}
+
+.copyrightText {
+  text-transform: uppercase;
+}
+.copyrightText p {
+  color: $white !important;
+  font-weight: bold;
+  font-size: 15px;
+}

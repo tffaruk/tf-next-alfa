@@ -1,0 +1,252 @@
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "buttons";
+
+.ghtBanner {
+  padding: 50px 0 100px;
+}
+.ghtBanner .subtitle {
+  margin-bottom: 30px;
+}
+.ghtFeatures {
+  margin-bottom: 20px;
+}
+.ghtFeatures .featuresBlock {
+  background-color: #fff;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0px 15px 55px 0px rgba(0, 0, 0, 0.08);
+  padding: 40px 20px 0 20px;
+  @include desktop {
+    padding: 40px 40px 0 40px;
+  }
+  @include tablet {
+    padding: 40px 25px 15px 25px;
+  }
+  overflow: hidden;
+}
+.ghtFeatures .featuresBlock .shapeEnd {
+  position: absolute;
+  pointer-events: none;
+  @include tablet {
+    opacity: 0.2;
+  }
+}
+.ghtFeatures .featuresBlock .shapeStart {
+  position: absolute;
+  pointer-events: none;
+  @include tablet {
+    opacity: 0.2;
+  }
+}
+.ghtFeatures .featuresBlock .shapeStart {
+  bottom: 0;
+  left: 0;
+}
+.ghtFeatures .featuresBlock .shapeEnd {
+  top: 0;
+  right: 0;
+}
+.ghtFeatures .featuresBlock .block {
+  padding: 0 20px;
+  @include desktop {
+    padding: 0;
+  }
+  position: relative;
+  height: 100%;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 1px;
+    background-color: #efefef;
+    left: -15px;
+    top: 0;
+  }
+}
+.ghtFeatures .featuresBlock > .row > div {
+  margin-bottom: 40px;
+  @include tablet {
+    margin-bottom: 25px;
+  }
+}
+.ghtFeatures .featuresBlock > .row > div:first-child .block::before {
+  display: none;
+}
+.ghtFeatures .featuresBlock > .row > div:nth-child(4) .block::before {
+  display: none;
+}
+.ghtFeatures .featuresBlock > .row > div:nth-child(7) .block::before {
+  display: none;
+}
+@media only screen and (max-width: 991px) {
+  .ghtFeatures .featuresBlock .block::before {
+    display: none;
+  }
+
+  .ghtFeatures.featuresBlock .block::before h1 .title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.ghtProcess {
+  padding: 100px 0;
+}
+.ghtProcess .processItem {
+  margin-top: 50px;
+  position: relative;
+}
+.ghtProcess .processItem::before {
+  position: absolute;
+  content: "";
+  top: 40px;
+  left: -70px;
+  width: 110px;
+  height: 28px;
+  background-image: url("data:image/svg+xml,%3Csvg width='120' height='28' viewBox='0 0 120 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='-1.74846e-07' y1='14' x2='120' y2='14' stroke='%23eceeff' stroke-width='4'/%3E%3Cpath d='M52 2L67 14L52 26' stroke='%23eceeff' stroke-width='4'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-position: center;
+}
+.ghtProcess .processItem .count {
+  height: 110px;
+  width: 110px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #eceeff;
+  color: $primary-color;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 900;
+}
+.ghtProcess .processItem .count span {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+}
+.ghtProcess .processItem .block {
+  border-radius: 12px;
+  box-shadow: 0px 15px 55px 0px rgba(0, 0, 0, 0.08);
+  padding: 30px 25px;
+  margin-top: 20px;
+  @include tablet {
+    padding: 30px 15px;
+  }
+}
+.ghtProcess .processItemsBlock > div:first-child .processItem::before {
+  display: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .ghtProcess .processItemsBlock > div:nth-child(3) .processItem::before {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .processItem::before {
+    display: none;
+  }
+}
+
+.ghtPricing .pricingItem {
+  border-radius: 12px;
+  box-shadow: 0px 15px 55px 0px rgba(0, 0, 0, 0.08);
+  padding: 40px 30px;
+}
+.ghtPricing .pricingItem .title {
+  font-size: 26px;
+  @include tablet {
+    font-size: 24px;
+  }
+}
+
+.ghtPricing .pricingItem .pricingFeatures {
+  li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  li::before {
+    position: absolute;
+    content: "";
+    height: 9px;
+    width: 9px;
+    border: 2px solid $primary-color;
+    left: 0;
+    top: 9px;
+    border-radius: 50px;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: $primary-color;
+  opacity: 0.4;
+  padding: 30px 25px;
+  transition: 0.3s;
+  &:hover {
+    opacity: 1;
+  }
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: -10px;
+}
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: -10px;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 32px;
+}
+
+.projects-image-block {
+  .imac {
+    z-index: 2;
+    pointer-events: none;
+  }
+  .swiper-block {
+    top: 21px;
+    left: 23px;
+    z-index: 1;
+    width: calc(100% - 45px);
+    @include desktop-xl {
+      top: 15px;
+      left: 17px;
+      width: calc(100% - 34px);
+    }
+    @include mobile-xs {
+      top: 13px;
+      left: 13px;
+      width: calc(100% - 23px);
+    }
+  }
+}
+
+.project-content {
+  padding-bottom: 60px;
+  h3 {
+    font-family: "Recoleta";
+  }
+  .swiper-pagination {
+    bottom: 0;
+  }
+}
+.swiper-pagination-bullet {
+  height: 12px;
+  width: 12px;
+  &-active {
+    background-color: $primary-color;
+  }
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
+}
+.showcaseContent .content {
+  color: #0000005c;
+}

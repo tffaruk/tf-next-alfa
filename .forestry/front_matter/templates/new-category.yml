@@ -1,0 +1,19 @@
+---
+label: New Category
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: meta_title
+  label: meta_title
+- type: text
+  name: image
+  label: image
+- type: text
+  name: description
+  label: description
+- type: boolean
+  name: noindex
+  label: noindex
