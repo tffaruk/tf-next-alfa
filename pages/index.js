@@ -59,7 +59,7 @@ const Home = ({ homePageData, products, productIndex, allDownloadData }) => {
 
 export default Home;
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const homePageData = getSingleFile("content/_index.md");
   const allProducts = getAllData("content/products", false);
   const productIndex = getSingleFile("content/products/_index.md");
@@ -72,5 +72,6 @@ export const getServerSideProps = async () => {
       productIndex: productIndex,
       allDownloadData: allDownloadData,
     },
+    revalidate: 1,
   };
 };
