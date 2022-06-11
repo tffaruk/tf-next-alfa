@@ -1,18 +1,18 @@
 ---
 title: WordPress To Hugo Migration (Step By Step Guide)
 date: 2022-04-18
-meta_title: 
-description: A step by step guide to migrating from WordPress to Hugo. This easy-to-follow
+meta_title:
+description:
+  A step by step guide to migrating from WordPress to Hugo. This easy-to-follow
   guide covers the basic steps required for moving your website, along with a few
   useful tips.
 layout: post
 image: "/blog/wordpress-to-hugo-migration.png"
 author: Mehedi Sharif
-draft: false
+draft: true
 categories:
-- tutorials
-- hugo
-
+  - tutorials
+  - hugo
 ---
 
 <Toc level="h2" />
@@ -91,10 +91,10 @@ Before moving from WordPress to Hugo, there are a few criteria to meet. Begin wi
 
 Install the following apps / tools on your machine:
 
-* Install Hugo
-* Install <A href="https://go.dev/doc/install">Go</A>
-* Install the <A href="https://nodejs.org/en/download/">Node.js</A>, which includes npm
-* Install <A href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git</A>
+- Install Hugo
+- Install <A href="https://go.dev/doc/install">Go</A>
+- Install the <A href="https://nodejs.org/en/download/">Node.js</A>, which includes npm
+- Install <A href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git</A>
 
 When you are done installing these tools, let’s move on directly to the conversion process.
 
@@ -110,38 +110,38 @@ To begin with, you need to <A href="https://gohugo.io/getting-started/quick-star
 
 While migrating from WordPress to Hugo, you might be looking for a light, super-fast, and highly customizable theme. When you’re selecting a Hugo theme for your website, you should look for the following features:
 
-* Google page speed of the theme
-* Unique Content representation
-* Availability of Shortcodes
-* Multilingual Feature (If your website has a global audience)
-* Search Functionality
-* Customizability of the theme
+- Google page speed of the theme
+- Unique Content representation
+- Availability of Shortcodes
+- Multilingual Feature (If your website has a global audience)
+- Search Functionality
+- Customizability of the theme
 
-For this demonstration of the WordPress to Hugo migration, we’ve chosen the <A href="https://github.com/themefisher/bigspring-light">Bigspring theme</A>. You can also choose your preferred free theme from <A href="https://themes.gohugo.io/">themes.gohugo.io</A>  . But if you want to use a high-quality premium theme, you can visit <A href="https://gethugothemes.com/" rel="follow" >Gethugothemes</A>, where you will get a vast collection of remarkable premium Hugo themes.
+For this demonstration of the WordPress to Hugo migration, we’ve chosen the <A href="https://github.com/themefisher/bigspring-light">Bigspring theme</A>. You can also choose your preferred free theme from <A href="https://themes.gohugo.io/">themes.gohugo.io</A> . But if you want to use a high-quality premium theme, you can visit <A href="https://gethugothemes.com/" rel="follow" >Gethugothemes</A>, where you will get a vast collection of remarkable premium Hugo themes.
 
 ### Exporting WordPress site’s content for Hugo
 
 Hugo utilizes the markdown files to store all its contents. So, all the information is kept in flat files. Though it takes a considerable amount of time to transit from WordPress to Hugo, there are several alternatives for moving:
 
-* **<A href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">WordPress-to-hugo-exporter</A>:** It's a one-click WordPress plugin that can transform all the contents to Hugo-compatible Markdown and YAML.
-* **<A href="https://wordpress.org/plugins/jekyll-exporter/">Jekyll Exporter</A>:**  You can also download the Jekyll Exporter to convert your WordPress website’s posts, pages, and settings into Hugo format.
-* **<A href="https://github.com/wooni005/exitwp-for-hugo">Exitwp-for-hugo</A>:** It's a python script that effectively transforms WordPress contents (pages & posts) to Hugo format ( Markdown and YAML )  using the XML export via WordPress.
-* **<A href="https://github.com/palaniraja/blog2md">blog2md</A>:** Yet another WordPress to Hugo migrator, which is basically a node package created to parse the .xml file. Also, it saves approved comments within the YOUR-POST-NAME-comments.md file as well as the posts.
+- **<A href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">WordPress-to-hugo-exporter</A>:** It's a one-click WordPress plugin that can transform all the contents to Hugo-compatible Markdown and YAML.
+- **<A href="https://wordpress.org/plugins/jekyll-exporter/">Jekyll Exporter</A>:**  You can also download the Jekyll Exporter to convert your WordPress website’s posts, pages, and settings into Hugo format.
+- **<A href="https://github.com/wooni005/exitwp-for-hugo">Exitwp-for-hugo</A>:** It's a python script that effectively transforms WordPress contents (pages & posts) to Hugo format ( Markdown and YAML )  using the XML export via WordPress.
+- **<A href="https://github.com/palaniraja/blog2md">blog2md</A>:** Yet another WordPress to Hugo migrator, which is basically a node package created to parse the .xml file. Also, it saves approved comments within the YOUR-POST-NAME-comments.md file as well as the posts.
 
 We recommend you use the Wordpres-to-hugo-exporter plugin to complete this process. First of all, install the plugin named <A href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">wordpress-to-hugo-exporter</A>.
 
 Though you won’t be getting the plugin in the WordPress Plugin repository or the dashboard. But you can download it from GitHub and upload it to your WordPress website to install and activate it.
 
-* **Step 1:** Go to the Git <A href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">repo</A> and download a zipped version of the plugin.
-* **Step 2:** Head back to your WordPress dashboard and then go to **Plugins > Add New**.
-* **Step 3:** Click the **Upload Plugin** button and select the plugin's ZIP file that you downloaded earlier.
-* **Step 4:** When the installation process is finished, **Activate** the plugin.
-* **Step 5: Go** to **Tools> Export** **to Hugo** after the installation process, which might take some time to load.
+- **Step 1:** Go to the Git <A href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">repo</A> and download a zipped version of the plugin.
+- **Step 2:** Head back to your WordPress dashboard and then go to **Plugins > Add New**.
+- **Step 3:** Click the **Upload Plugin** button and select the plugin's ZIP file that you downloaded earlier.
+- **Step 4:** When the installation process is finished, **Activate** the plugin.
+- **Step 5: Go** to **Tools> Export** **to Hugo** after the installation process, which might take some time to load.
 
 If it works properly, you will be given a ZIP file with the following contents:
 
-* All the posts and pages available on your last website
-* The files that you've uploaded (/wp-content/*)
+- All the posts and pages available on your last website
+- The files that you've uploaded (/wp-content/\*)
 
 However, you may not be successful in your first attempt, which is normal. If the site you are converting is too large, the ZIP file creation process will fail. Therefore, you can try the process via CLI.
 
@@ -182,12 +182,12 @@ This process requires your patience since it will take a significant amount of t
 
 Keep in mind that each post requires a lot of minor adjustments, including:
 
-* Frontmatter fixing like image path, URLs, etc.
-* Ensure that the current URL slug is the same as the old one
-* Omit WordPress shortcodes or plugin dependencies and replace them with Hugo shortcodes.
-* Search and replace images from the URL path and put them in the relative path.
-* Find and replace character strings created by escape characters `(_, *, [, -, <_, _)` that are random.
-* Use a lot of regexes to find inter-blog links, bold texts, underlined text, strike-through text, etc.
+- Frontmatter fixing like image path, URLs, etc.
+- Ensure that the current URL slug is the same as the old one
+- Omit WordPress shortcodes or plugin dependencies and replace them with Hugo shortcodes.
+- Search and replace images from the URL path and put them in the relative path.
+- Find and replace character strings created by escape characters `(_, *, [, -, <_, _)` that are random.
+- Use a lot of regexes to find inter-blog links, bold texts, underlined text, strike-through text, etc.
 
 ### Exploring The Exported WordPress Data
 
@@ -264,11 +264,11 @@ config.toml
 
 **Step 3:** You can choose and apply your preferred theme on Hugo and then observe for testing purposes. So, we will show you the easiest way of applying the Hugo theme to your migrated website.
 
-* Download the BigSpring theme in your local directory. You can get the free theme from the GitHub <A href="https://github.com/themefisher/bigspring-light">repository</A> or get the premium theme from the official <A href="https://gethugothemes.com/products/bigspring/">site</A>.
-* After downloading the theme file, unzip the file in your local directory. Now rename the folder from **bigspring-light-master** to **bigspring-light**.
-* Now, you need to copy the bigspring-light folder and go to your Hugo project folder. Then paste the downloaded theme into the **Theme** folder located in your project folder.
-* If you have the premium theme, extract the file, get inside the downloaded theme folder, copy the Themes folder, and paste it inside the project folder you’ve created.
-* You will get config.toml file inside the Bigspring (both free & pro) theme folder. You need to edit the file and change the theme name inside the file as theme = “bigspring-hugo.”
+- Download the BigSpring theme in your local directory. You can get the free theme from the GitHub <A href="https://github.com/themefisher/bigspring-light">repository</A> or get the premium theme from the official <A href="https://gethugothemes.com/products/bigspring/">site</A>.
+- After downloading the theme file, unzip the file in your local directory. Now rename the folder from **bigspring-light-master** to **bigspring-light**.
+- Now, you need to copy the bigspring-light folder and go to your Hugo project folder. Then paste the downloaded theme into the **Theme** folder located in your project folder.
+- If you have the premium theme, extract the file, get inside the downloaded theme folder, copy the Themes folder, and paste it inside the project folder you’ve created.
+- You will get config.toml file inside the Bigspring (both free & pro) theme folder. You need to edit the file and change the theme name inside the file as theme = “bigspring-hugo.”
 
 That’s it, and now your site is ready to get launched in the Hugo environment using the Bigspirng theme.
 
