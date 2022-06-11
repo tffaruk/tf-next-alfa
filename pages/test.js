@@ -1,7 +1,6 @@
 import React from "react";
 
 const Test = ({ result }) => {
-  console.log(result);
   return (
     <div>
       {result.map((data, i) => (

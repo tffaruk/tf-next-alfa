@@ -7,7 +7,7 @@ layout: post
 image: "/blog/simple-admin-panel-templates.png"
 author: Mehedi Sharif
 draft: false
-categories: ["dashboard-templates","admin-templates"]
+categories: ["dashboard-templates", "admin-templates"]
 ---
 
 With the development of different frameworks, the creation of beautiful and elegant themes has become easy and feasible. Simple admin panel templates are one stapes ahead. The workflow has also been developed and sped up a lot using these free and paid admin panel templates. You will find the templates a lot responsive and usable on all kinds of devices, including mobile and tablet computers.

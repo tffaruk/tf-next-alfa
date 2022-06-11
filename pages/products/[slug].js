@@ -58,7 +58,7 @@ const SinglePage = ({
 
   const handleUpdate = () => {
     setDownloadData((previousValue) => previousValue + 1);
-    fetch(`https://salty-citadel-03660.herokuapp.com/download/${title}`, {
+    fetch(`https://themefisher.herokuapp.com/download/${title}`, {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ download: downloadData + 1 }),
