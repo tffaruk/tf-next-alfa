@@ -1,6 +1,7 @@
 {
   "name": "themefisher",
   "version": "2.0.0",
+  "main": "index.js",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
