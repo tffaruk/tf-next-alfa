@@ -72,6 +72,6 @@ export const getStaticProps = async () => {
       productIndex: productIndex,
       allDownloadData: allDownloadData,
     },
-    revalidate: 1,
+    revalidate: 10,
   };
 };
