@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-before-interactive-script-outside-document */
 
-import { getDownloadData } from "@/lib/api";
+// import { getDownloadData } from "@/lib/api";
 import { getAllData, getSingleFile } from "@/lib/pages";
 import Banner from "components/HomePage/Banner";
 import Posts from "components/HomePage/Posts";
@@ -63,14 +63,18 @@ export const getServerSideProps = async () => {
   const homePageData = getSingleFile("content/_index.md");
   const allProducts = getAllData("content/products", false);
   const productIndex = getSingleFile("content/products/_index.md");
-  const allDownloadData = await getDownloadData();
+  // const allDownloadData = await getDownloadData();
+  const response = await fetch(
+    "https://salty-citadel-03660.herokuapp.com/download/data"
+  );
+  const { result } = await response.json();
 
   return {
     props: {
       homePageData: homePageData,
       products: allProducts,
       productIndex: productIndex,
-      allDownloadData: allDownloadData,
+      allDownloadData: result,
     },
   };
 };
