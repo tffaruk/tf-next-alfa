@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node lib/generateProducts.js && next build",
+    "build": "next build && node lib/generateProducts.js",
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap --config next-sitemap.config.mjs",
