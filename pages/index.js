@@ -12,7 +12,6 @@ const Home = ({ homePageData, products, productIndex, allDownloadData }) => {
   const { banner } = homePageData.frontmatter;
   const { logo, title, meta_image, description, site_url, meta_author } =
     config.parameter;
-  console.log(allDownloadData);
 
   return (
     <Layout
